@@ -1,12 +1,15 @@
 {
-  "name": "epg-devlog-tool",
-  "version": "1.0.2",
+  "name": "root",
+  "private": true,
+  "version": "1.0.0",
   "main": "index.js",
   "bin": {
     "epg-devlog": "./index.js"
   },
   "scripts": {
-    "start": "node ./index.js start"
+    "start": "node ./index.js start",
+    "build:ui": "pnpm -F ui build",
+    "dev:ui": "pnpm -F ui dev"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +17,7 @@
   "description": "",
   "dependencies": {
     "commander": "^12.1.0",
-    "cors": "^2.8.5",
-    "cros": "^1.0.1",
-    "dayjs": "^1.11.11",
-    "express": "^4.19.2",
-    "mysql": "^2.18.1",
     "shelljs": "^0.8.5",
-    "source-map": "^0.7.4"
+    "dayjs": "^1.11.11"
   }
 }

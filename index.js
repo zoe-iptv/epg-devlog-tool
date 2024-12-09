@@ -8,7 +8,7 @@ program
   .description("Start the application")
   .action(() => {
     console.log("Starting the application...");
-    shell.exec("node server/index.js", { async: true });
+    shell.exec("node packages/server/index.js", { async: true });
     const tmole = shell.exec("tmole 3001", { async: true });
     tmole.stdout.on('data', function(data) {
       /* ... do something with data ... */

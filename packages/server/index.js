@@ -32,9 +32,12 @@ app.use(express.json());
 //   next();
 // });
 
+// 将dist目录中的静态文件作为静态资源提供
+app.use(express.static(path.join(__dirname, '../ui/dist')));
+
 app.get("/", (req, res) => {
-  res.send("EPG Debug Server is running").status(200);
-  // res.sendFile(path.join(__dirname, 'index.html'));
+//   res.send("EPG Debug Server is running").status(200);
+  res.sendFile(path.join('../ui/dist', 'index.html'));
 });
 
 app.post("/reportEpgLog", async (req, res) => {
